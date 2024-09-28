@@ -6,6 +6,7 @@ int main()
 {
     vector<int> vec;
     int ip;
+    cout<<"\n --- Input and Output in Vector --- \n";
     cout<<"Enter 5 elements in vector :";
     for(int i=0;i<5;i++)
     {
