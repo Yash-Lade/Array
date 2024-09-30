@@ -1,0 +1,47 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+int Binary(vector<int> arr, int target)
+{
+    int l,r,mid;
+    l=0;r=arr.size()-1;
+    while (l<=r)
+    {
+        mid=(l+r)/2;
+    
+        if(arr[mid]==target)
+        return mid;
+
+        else if(target>arr[mid])
+        {
+            l=mid+1;
+            
+        }
+
+        else if(target<arr[mid])
+        {
+            r=mid-1;
+            
+        }
+    }
+
+    return -1;
+}
+int main()
+{
+    vector<int> arr;int no,n,target;
+    cout<<"Enter the size of array :";cin>>n;
+    cout<<"Enter the sorted elements in vector :";
+    for(int i=0;i<n;i++)
+    {
+        cin>>no;
+        arr.push_back(no);
+    }
+
+    cout<<"Enter the element to be searched :";
+    cin>>target;
+
+    int ans=Binary(arr, target);
+    cout<<"The index is :"<<ans;
+}
