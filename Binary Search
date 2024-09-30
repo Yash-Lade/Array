@@ -9,7 +9,7 @@ int Binary(vector<int> arr, int target)
     while (l<=r)
     {
         mid=(l+r)/2;
-    
+          //always write mid as mid= st + (end -st)/2 to be safe from INT_MAX condition
         if(arr[mid]==target)
         return mid;
 
