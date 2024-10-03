@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+#include<limits.h>
+using namespace std;
+
+int peakIndex(vector<int> arr)
+{
+        int ans=INT_MIN,n=arr.size(),index;
+
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]>arr[ans]){
+                ans=arr[i];
+                index=i;
+            }
+            
+        }
+        return index;
+}
+
+int main()
+{
+    int no,num;vector<int> arr;
+
+    cout<<"Enter the size of the array :";
+    cin>>no;
+
+    cout<<"Enter the elements in the vector: ";
+    for(int i=0;i<no;i++)
+    {
+        cin>>num;
+        arr.push_back(num);
+    }
+
+    int ans=peakIndex(arr);
+    cout<<"The peak element found at index: "<<ans;
+    
+
+}
